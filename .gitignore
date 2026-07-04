@@ -1,13 +1,59 @@
+# Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,linux,dotenv,macos
+# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,linux,dotenv,macos
+
+### dotenv ###
+.env
+
+### Linux ###
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+### macOS ###
 .DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+### macOS Patch ###
+*.icloud
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+.history/
+*.vsix
+
+### VisualStudioCode Patch ###
+.history
+.ionide
+
+# Project-specific
 node_modules
 .worktrees
 .sst
-.env
 .env.local
 .idea
-.vscode
 .codex
-*~
 playground
 tmp
 dist
@@ -25,8 +71,6 @@ a.out
 target
 .scripts
 .direnv/
-
-# Local dev files
 opencode-dev
 UPCOMING_CHANGELOG.md
 logs/
