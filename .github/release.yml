@@ -1,0 +1,56 @@
+changelog:
+  categories:
+    - title: Breaking Changes
+      labels:
+        - breaking
+        - breaking-change
+        - major
+        - semver-major
+    - title: Features
+      labels:
+        - feature
+        - features
+        - enhancement
+        - minor
+        - semver-minor
+    - title: Fixes
+      labels:
+        - fix
+        - bug
+        - bugs
+        - bugfix
+        - patch
+        - semver-patch
+    - title: Documentation
+      labels:
+        - docs
+        - documentation
+        - readme
+    - title: Tests
+      labels:
+        - test
+        - tests
+        - testing
+    - title: Performance
+      labels:
+        - perf
+        - performance
+    - title: CI/CD
+      labels:
+        - ci
+        - cicd
+        - build
+        - deploy
+        - github-actions
+    - title: Dependencies
+      labels:
+        - dependencies
+        - dependency
+        - dependabot
+    - title: Chores
+      labels:
+        - chore
+        - maintenance
+    - title: Other
+      labels:
+        - "*"

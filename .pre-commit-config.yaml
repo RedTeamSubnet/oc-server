@@ -1,0 +1,80 @@
+fail_fast: true
+exclude: |
+  (?x)^(
+      \.git/.*
+    | \.venv/.*
+    | __pycache__/.*
+    | node_modules/.*
+    | dist/.*
+    | .turbo/.*
+    | bun.lock
+  )$
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-json
+        name: check-json
+        files: \.json$
+      - id: check-toml
+        name: check-toml
+        files: \.toml$
+      - id: check-yaml
+        name: check-yaml
+        files: \.ya?ml$
+      - id: end-of-file-fixer
+        name: end-of-file-fixer
+      - id: mixed-line-ending
+        name: mixed-line-ending
+      - id: trailing-whitespace
+        name: trailing-whitespace
+        exclude: '\.md$'
+      - id: fix-byte-order-marker
+        name: fix-byte-order-marker
+      - id: detect-private-key
+        name: detect-private-key
+      - id: check-case-conflict
+        name: check-case-conflict
+      - id: check-symlinks
+        name: check-symlinks
+      - id: destroyed-symlinks
+        name: destroyed-symlinks
+      - id: check-executables-have-shebangs
+        name: check-executables-have-shebangs
+      - id: check-shebang-scripts-are-executable
+        name: check-shebang-scripts-are-executable
+      - id: check-merge-conflict
+        name: check-merge-conflict
+      - id: check-added-large-files
+        name: check-added-large-files
+        args: ["--maxkb=2500"]
+      - id: no-commit-to-branch
+        name: no-commit-to-branch
+        args: ["--branch=main", "--branch=master"]
+
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.28.0
+    hooks:
+      - id: gitleaks
+        name: gitleaks
+
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.5.0
+    hooks:
+      - id: detect-secrets
+        name: detect-secrets
+
+  - repo: https://github.com/shellcheck-py/shellcheck-py
+    rev: v0.11.0.1
+    hooks:
+      - id: shellcheck
+        name: shellcheck
+        files: \.sh$
+
+  - repo: https://github.com/biomejs/pre-commit
+    rev: v1.9.4
+    hooks:
+      - id: biome-check
+        name: biome-check
+        additional_dependencies: ["@biomejs/biome"]
